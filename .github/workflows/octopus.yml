@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  OCTOPUS_PROJECT_NAME: OctoService
+  OCTOPUS_SPACE_NAME: Default
+  OCTOPUS_ENVIRONMENT_NAME: dev
+
 jobs:
   generate:
     runs-on: ubuntu-latest
