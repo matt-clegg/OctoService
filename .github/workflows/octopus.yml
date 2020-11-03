@@ -10,7 +10,7 @@ env:
   OCTOPUS_PROJECT_NAME: OctoService
   OCTOPUS_SPACE_NAME: Default
   OCTOPUS_ENVIRONMENT_NAME: dev
-  key:  
+  
 jobs:
   generate:
     runs-on: ubuntu-latest
