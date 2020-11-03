@@ -39,6 +39,6 @@ jobs:
           octo pack --id="OctoService" --format="Zip" --version="$PACKAGE_VERSION" --basePath="./packagesoutput/OctoService" --outFolder="./packages"
           octo push --package="./packages/OctoService.$PACKAGE_VERSION.zip" --server="${{ secrets.OCTOPUS_SERVER }}" --apiKey="${{ secrets.OCTOPUS_APIKEY }}"
           
-      - name: Create and eeploy release
+      - name: Create and deploy release
         run: octo create-release --project="$OCTOPUS_PROJECT_NAME" --packageVersion="$PACKAGE_VERSION" --releaseNumber="$PACKAGE_VERSION" --server="${{ secrets.OCTOPUS_SERVER }}" --apiKey="${{ secrets.OCTOPUS_APIKEY }}" --space="$OCTOPUS_SPACE_NAME" --deployTo="$OCTOPUS_ENVIRONMENT_NAME"
         
